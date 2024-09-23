@@ -1,0 +1,46 @@
+/* src/components/Columns/Column4/Column4.css */
+
+.column4 {
+  font-family: var(--body-font);
+  padding: 20px;
+}
+
+.sections-list {
+  margin-top: 10px;
+}
+
+.section-item {
+  background-color: #f9f9f9;
+  margin-bottom: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notes-list {
+  margin-top: 10px;
+}
+
+.note-item {
+  background-color: #fff;
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.save-template-button {
+  margin-top: 10px;
+  background-color: var(--brown);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}

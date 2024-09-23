@@ -1,0 +1,160 @@
+/* src/styles/globals.css */
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+}
+
+p {
+  margin-bottom: 1em;
+  font-family: var(--body-font);
+}
+
+/* Links */
+a {
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--sage-green-dark);
+}
+
+/* Buttons */
+button {
+  background-color: var(--brown);
+  color: var(--button-text-color);
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--brown-dark);
+}
+
+button:disabled {
+  background-color: var(--grey);
+  cursor: not-allowed;
+}
+
+/* Form Elements */
+input, textarea, select {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 0.5em;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--sage-green);
+  outline: none;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+
+th, td {
+  padding: 0.75em;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Forms */
+form {
+  margin-bottom: 2em;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  font-family: var(--body-font);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-family: var(--body-font);
+}
+
+/* Debug Section */
+.debug-section {
+  background-color: var(--debug-background);
+  padding: 1em;
+  margin-top: 2em;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  color: var(--debug-text-color);
+}
+
+.debug-section pre {
+  background-color: var(--pre-background);
+  padding: 0.5em;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+/* Sidebar Menu Items */
+.menu-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5em;
+  color: var(--menu-heading-color);
+}
+
+.menu-item ul li {
+  padding: 0.5em 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.menu-item ul li:hover {
+  background-color: var(--menu-hover-background);
+}
+
+/* Save Status Indicator */
+.save-status {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: var(--save-status-background);
+  color: var(--save-status-text);
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Forms in Sidebar */
+.sidebar .menu-item input.search-box {
+  border-radius: 20px;
+  padding: 0.5em 1em;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 4px;
+  border: 2px solid var(--scrollbar-track);
+}

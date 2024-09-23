@@ -1,38 +1,168 @@
-.App {
-  text-align: center;
+/* src/App.css */
+
+/* Root Variables */
+:root {
+  --grey: #dcdcdc;
+  --light-grey: #f0f0f0;
+  --sage-green: #a8d5ba;
+  --sage-green-dark: #7cbf9e;
+  --brown: #8b4513;
+  --brown-dark: #5c3317;
+  --border-color: #ccc;
+  --scrollbar-track: #f1f1f1;
+  --scrollbar-thumb: #888;
+  --text-color: #333;
+  --debug-background: #fffbcc;
+  --debug-text-color: #333;
+  --pre-background: #f4f4f4;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* App Container */
+.app-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: row; /* Sidebar and main content side by side */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Main Content */
+.main-content {
+  flex: 1;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  background-color: var(--light-grey);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  background-color: var(--grey);
+  transition: background-color 0.3s ease;
+  font-size: 1em;
+  white-space: nowrap;
+}
+
+.tab.active {
+  background-color: var(--light-grey);
+  border-bottom: 2px solid var(--sage-green);
+}
+
+.tab:hover {
+  background-color: var(--sage-green);
+  color: #fff;
+}
+
+/* Columns Container */
+.columns-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Individual Column */
+.column {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Debugging Toggle Button */
+.debug-button {
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+  background-color: var(--light-grey);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.debug-button:hover {
+  background-color: var(--grey);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Debugging Section */
+.debug-section {
+  position: fixed;
+  bottom: 100px;
+  right: 10px;
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.debug-section h4 {
+  margin-top: 0;
+}
+
+.debug-section pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .sidebar {
+    width: 100%;
+    height: auto;
   }
+
+  .columns-container {
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+  }
+
+  .tab {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+}
+
+/* Adjusted columns-container to handle multiple columns */
+.columns-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.column {
+  flex: 1;
+  overflow-y: auto;
+  transition: flex 0.3s ease;
+  min-width: 300px;
+}
+
+/* Adjust tabs to reflect multiple active tabs */
+.tab.active {
+  background-color: var(--light-grey);
+  border-bottom: 2px solid var(--sage-green);
 }

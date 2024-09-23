@@ -1,0 +1,20 @@
+/* src/components/SaveStatus.css */
+
+.save-status {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: var(--sage-green);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: none; /* Initially hidden */
+}
+
+/* Show when active */
+.save-status.active {
+  display: block;
+}

@@ -1,0 +1,35 @@
+/* src/components/Columns/Column5/Column5.css */
+
+.column5 {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.report-document {
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+
+.report-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.report-body {
+  white-space: pre-wrap;
+}
+
+.pdf-button {
+  margin-top: 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}

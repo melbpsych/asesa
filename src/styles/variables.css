@@ -1,0 +1,57 @@
+/* src/styles/variables.css */
+
+/* Color Palette */
+:root {
+  /* Primary Colors */
+  --sage-green: #4b6b43;
+  --sage-green-dark: #3a5331;
+  --brown: #8b5e3c;
+  --brown-dark: #6b4d2c;
+  --light-grey: #f5f5f5;
+  --grey: #dcdcdc;
+  --dark-grey: #333333;
+  --border-color: #ccc;
+
+  /* Text Colors */
+  --text-color: #333333;
+  --heading-color: #4b6b43;
+  --button-text-color: #ffffff;
+  --menu-heading-color: #4b6b43;
+  --debug-text-color: #555555;
+
+  /* Background Colors */
+  --background-color: #f5f5f5;
+  --debug-background: #f0f0f0;
+  --pre-background: #eaeaea;
+  --save-status-background: #ffffff;
+  --save-status-text: #333333;
+  --menu-hover-background: #bbb;
+  --scrollbar-track: #f1f1f1;
+  --scrollbar-thumb: #888;
+
+  /* Fonts */
+  --body-font: 'Arial', sans-serif;
+  --heading-font: 'Helvetica Neue', sans-serif;
+  --report-font: 'Georgia', serif;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Border Radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+
+  /* Transition */
+  --transition-duration: 0.3s;
+  --transition-timing: ease;
+}
+
+/* Dark Mode Variables (Future Enhancement) */
+[data-theme="dark"] {
+  /* Define dark mode variables here */
+}

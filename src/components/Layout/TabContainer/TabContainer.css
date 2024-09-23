@@ -1,0 +1,78 @@
+/* src/components/Layout/TabContainer/TabContainer.css */
+
+/* Adjusted TabContainer Styles */
+.tab-container {
+  position: relative;
+  flex: 1;
+  transition: flex 0.3s ease;
+  overflow: hidden;
+}
+
+.tab-container.expanded {
+  flex: 5;
+}
+
+.tabs-container {
+  position: relative;
+}
+
+/* Adjusted Tab Styles */
+.tab {
+  position: absolute;
+  left: 0;
+  top: 10px; /* Adjust as needed */
+  width: 40px;
+  min-height: 200px;
+  background-color: #dcdcdc;
+  cursor: pointer;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+  z-index: 2; /* Ensure tabs are above the sidebar toggle button */
+}
+
+.tab:hover {
+  background-color: #bbb;
+}
+
+/* Rotate text 90 degrees counterclockwise */
+.tab-text {
+  transform: rotate(-90deg);
+  font-size: 14px;
+  color: #333;
+  white-space: nowrap;
+}
+
+.content {
+  margin-left: 40px;
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Sidebar Toggle Button */
+.sidebar .toggle-button {
+  position: absolute;
+  top: 10px;
+  right: -15px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 16px;
+  z-index: 3; /* Ensure it's above the tabs */
+}
+
+.sidebar.hidden .toggle-button {
+  right: -15px;
+}
+
+/* Hide the sidebar completely when collapsed */
+.sidebar.hidden {
+  width: 0;
+  padding: 0;
+}
